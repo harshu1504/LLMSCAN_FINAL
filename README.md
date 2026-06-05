@@ -1,8 +1,8 @@
 ---
-title: LLMSCAN Alignment Verification
+title: "LLMSCAN Alignment Verification"
 emoji: 🔬
 colorFrom: indigo
-colorTo: cyan
+colorTo: blue
 sdk: docker
 pinned: false
 license: mit
