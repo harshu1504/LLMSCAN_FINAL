@@ -20,5 +20,11 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          # Safely remove 'hf' remote if it already exists from a stuck run
+          git remote remove hf || true
+          
+          # Re-add clean endpoint matching your new destination space
           git remote add hf https://Harshitha1504:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/Harshitha1504/LLMSCAN_FINAL1
+          
+          # Force push to reset sync structure cleanly
           git push --force hf main
