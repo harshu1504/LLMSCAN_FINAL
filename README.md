@@ -1,3 +1,12 @@
+---
+title: LLMSCAN Alignment Verification
+emoji: 🔬
+colorFrom: indigo
+colorTo: cyan
+sdk: docker
+pinned: false
+license: mit
+---
 # LLMSCAN: Proactive Monitoring & Alignment Verification
 
 LLMSCAN is an advanced proactive monitoring and safety alignment system. It leverages **Causal Mediation Analysis** to track and intervene in the activation pathways of large language models (LLMs). By dynamically neutralizing safety-critical layers, LLMSCAN can detect backdoor triggers, lies, toxic behavior, and jailbreaks, steering the model back to safety.
