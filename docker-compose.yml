@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app/backend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=sqlite:///./frontend/users_data.db
+    volumes:
+      - ./frontend:/app/frontend
